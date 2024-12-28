@@ -16,6 +16,15 @@ const mostrarMenu = () => {
     console.log(`${'6'.red} Borrar tarea`);
     console.log(`${'0'.red} Salir`);
 
+    const readline = require('readline').createInterface({
+        input: process.stdin,
+        output: process.stdout
+    })
+
+    readline.question('Seleccione una opcion' ,(opt) => {
+        console.log(opt);
+        readline.close();
+    } )
 }
 
 module.exports = {
